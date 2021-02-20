@@ -8,7 +8,7 @@ before_install:
 
 script:
   - docker run vadimshavlovski/docker-react npm run test -- --coverage
-
+ 
 deploy:
     provider: elasticbeanstalk
     region: "us-east-2"
