@@ -3,6 +3,9 @@ sudo: required
 services:
   - docker
 
+env:
+  - YARN_GPG=no
+
 before_install:
   - docker build -t vadimshavlovski/docker-react -f Dockerfile.dev .
 
