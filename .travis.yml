@@ -8,29 +8,15 @@ before_install:
 
 script:
   - docker run -e CI=true vadimshavlovski/docker-react npm run test -- --coverage # -- --coverage to exit npm run test automatically
- 
-#deploy:
-#    provider: elasticbeanstalk
-#    region: "us-east-2"                                             # the region you choose
-#    app: "docker-react"                                             # a name that you setup in aws
-#    env: "Dockerreact-env"                                          # a name that revere as the environment
-#    bucket_name: "elasticbeanstalk-us-east-2-200346635621"
-#    bucket_path: "docker-react"                                     # the name same as app names
-#    on:
-#      branch: master
-#    access_key_id:
-#      secure: "$AWS_ACCESS_KEY"
-#    secret_access_key:
-#      secure: "$AWS_SECRET_KEY"                                       # make sure you put double quote
 
-deploy:
-  provider: elasticbeanstalk
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
-  region: "us-east-2"
-  app: "docker-react"
-  env: "Dockerreact-env"
-  bucket_name: "elasticbeanstalk-us-east-2-200346635621"
-  bucket_path: "docker-react"                                     # the name same as app names
-  on:
-    branch: master
+#deploy:
+#  provider: elasticbeanstalk
+#  region: "us-east-2"                                             # the region you choose
+#  app: "docker-react"                                             # a name that you setup in aws
+#  env: "Dockerreact-env"                                          # a name that revere as the environment
+#  bucket_name: "elasticbeanstalk-us-east-2-200346635621"
+#  bucket_path: "docker-react"                                     # the name same as app names
+#  on:
+#    branch: master
+#  access_key_id: $AWS_ACCESS_KEY
+#  secret_access_key: $AWS_SECRET_KEY
